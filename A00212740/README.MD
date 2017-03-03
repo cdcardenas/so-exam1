@@ -138,5 +138,6 @@ Finalmente, para acceder al contenedor usamos el comando
 Instalación de contenedor: lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
 
 Comando expect: https://www.lifewire.com/linus-unix-command-expect-2201096
+
 Cmd challenge: https://cmdchallenge.com
 
