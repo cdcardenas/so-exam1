@@ -15,16 +15,27 @@ solucion: este reto se puede resolver utilizando el comando tail e indicando el 
 	tail -5 access.log
 
 b. Hello world/ : imprime hello Word en la ventana de comandos
+
 	echo Hello World
+
 c. Current_working_directory/: imprime el directorio actual de trabajo, este reto se puede resolver usando unicamente el comando pwd que imprime en consola el directorio actual
+
 	pwd
+
 d.List_files/: lista los archivos en la carpeta actual, podemos usar el comando ls que me imprime todos los archivps del directorio actual y -l para que imprima 1 por linea
+
 	ls -l
+
 e.Print_file_contents/ : imprime el contenido del archivo léeme.txt
+
 	cat leeme.txt
+
 f. Simple_sort/: organiza los contenidos del archivo sort.txt
+
 	sort sort.txt
+
 g. search_for_files_containing_string/: imprime todos los archivos en el directorio actual que contengan la linea “500”
+
 	grep -l 500 *
 
 #Punto 2
@@ -35,11 +46,11 @@ Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 
 #!/usr/bin/expect
 
-#se conecta mediante ssh.
+se conecta mediante ssh.
 spawn shh operativos@192.168.57.30
 
-#se hace uso de expect, el cual permite en combinacion con el comando send crear posibles rutinas de # posibles salidas de la consola con el SO, de forma que se pueden automatizar la ejecuciÃ³n de scripts
-#se estan descargando Metamorfosis de Franz Kafka y Tom Sawyer de Mark Twain
+-se hace uso de expect, el cual permite en combinacion con el comando send crear posibles rutinas de # posibles salidas de la consola con el SO, de forma que se pueden automatizar la ejecuciÃ³n de scripts
+-se estan descargando Metamorfosis de Franz Kafka y Tom Sawyer de Mark Twain
 
 spawn ssh operativos 192.168.57.30
 
@@ -71,32 +82,41 @@ expect eof
 Creación de un contenedor de debían mediante LXC y dar pruebas de su funcionamiento
 Para poder instalar un contenedor LXC primero debemos instalar todas las librerías (interprete de perl y paquetes de debootstrap) necesarias para poder ejecutar sus dependencias por lo que es necesario ejecutar los comandos.
 
-	#yum install epel-release
-	#yum install debootstrap perl libvirt
+	yum install epel-release
+
+	yum install debootstrap perl libvirt
 
 Ahora si podemos instalar las plantillas de LXC para crear los contenedores que deseemos
 
-	#yum install lxc lxc-templates
+	yum install lxc lxc-templates
 
 Mediante el uso de los comandos status y start prodemos verificar si el proceso daemon de LXC se encuentra funcionando o no. En caso de que no lo este lo debemos activar
 
-#systemctl status lxc.service
-#systemctl start lxc.service
+	systemctl status lxc.service
+
+	systemctl start lxc.service
+
 Ahora mediante el uso del comando #lxc-checkconfig podemos verificar el status del núcleo de virtualización.
 Ahora debemos seleccionar la plantilla que queramos usar para crear el contenedor, podemos ver las plantillas disponibles mediante el uso del comando
-		#ls -alh /usr/share/lxc/templates
+
+		ls -alh /usr/share/lxc/templates
 En nuestro caso vamos a instalar un contenedor de Debian por lo que lo crearemos mediante el comando
-		#lxc-create -n contenedorDChristian -t Debian
+
+		lxc-create -n contenedorDChristian -t Debian
 
 Una vez termine la creación del contenedor debemos iniciarlo 
-		#lxc-start -n contenedorDChristian -d
+		
+		lxc-start -n contenedorDChristian -d
+
 Finalmente, para acceder al contenedor usamos el comando
-		#lxc-console -n contenedorDChristian
+
+		lxc-console -n contenedorDChristian
 
 
 Referencias
 
-Instalación de contenedor lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
-Comando expect https://www.lifewire.com/linus-unix-command-expect-2201096
-Cmd challenge https://cmdchallenge.com
+Instalación de contenedor: lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
+
+Comando expect: https://www.lifewire.com/linus-unix-command-expect-2201096
+Cmd challenge: https://cmdchallenge.com
 
