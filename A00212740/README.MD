@@ -44,37 +44,54 @@ Existen varias formas de hacer scripts automatizados en CentOS, la que se utiliz
 Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 
 
-#!/usr/bin/expect
+	!/usr/bin/expect
 
-se conecta mediante ssh.
-spawn shh operativos@192.168.57.30
+	se conecta mediante ssh.
 
--se hace uso de expect, el cual permite en combinacion con el comando send crear posibles rutinas de # posibles salidas de la consola con el SO, de forma que se pueden automatizar la ejecución de scripts
--se estan descargando Metamorfosis de Franz Kafka y Tom Sawyer de Mark Twain
+	spawn shh operativos@192.168.57.30
 
-spawn ssh operativos 192.168.57.30
+	-se hace uso de expect, el cual permite en combinacion con 	el comando send crear posibles rutinas de # posibles 	salidas de la consola con el SO, de forma que se pueden 	automatizar la ejecución de scripts
+	-se estan descargando Metamorfosis de Franz Kafka y Tom 	Sawyer de Mark Twain
 
-expect "operativos@192.168.57.30's password:"
-send "operativos\r"
-expect "$"
-send "cd /tmp\r"
-expect "$"
-send "wget http://www.gutenberg.org/files/5200/5200.txt\r"
-expect "$"
-send "exit\r"
-expect eof
+	spawn ssh operativos 192.168.57.30
 
-spawn ssh operativos 192.168.57.40
+	expect "operativos@192.168.57.30's password:"
 
-expect "operativos@192.168.57.40's password:"
-send "operativos\r"
-expect "$"
-send "cd /tmp\r"
-expect "$"
-send "wget http://www.gutenberg.org/files/74/74.txt\r"
-expect "$"
-send "exit\r"
-expect eof
+	send "operativos\r"
+
+	expect "$"
+
+	send "cd /tmp\r"
+
+	expect "$"
+
+	send "wget http://www.gutenberg.org/files/5200/5200.txt\r"
+
+	expect "$"
+
+	send "exit\r"
+
+	expect eof
+
+	spawn ssh operativos 192.168.57.40
+
+	expect "operativos@192.168.57.40's password:"
+
+	send "operativos\r"
+
+	expect "$"
+
+	send "cd /tmp\r"
+
+	expect "$"
+
+	send "wget http://www.gutenberg.org/files/74/74.txt\r"
+
+	expect "$"
+
+	send "exit\r"
+
+	expect eof
 
 
 #punto 3
