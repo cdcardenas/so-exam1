@@ -50,7 +50,7 @@ Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 
 	spawn shh operativos@192.168.57.30
 
-	-se hace uso de expect, el cual permite en combinacion con 	el comando send crear posibles rutinas de # posibles 	salidas de la consola con el SO, de forma que se pueden 	automatizar la ejecución de scripts
+	-se hace uso de expect, el cual permite en combinacion con 	el comando send crear posibles rutinas de posibles 	salidas de la consola con el SO, de forma que se pueden 	automatizar la ejecución de scripts
 	-se estan descargando Metamorfosis de Franz Kafka y Tom 	Sawyer de Mark Twain
 
 	spawn ssh operativos 192.168.57.30
@@ -130,7 +130,7 @@ Finalmente, para acceder al contenedor usamos el comando
 		lxc-console -n contenedorDChristian
 
 
-Referencias
+#Referencias
 
 Instalaci�n de contenedor: lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
 
