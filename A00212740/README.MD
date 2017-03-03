@@ -1,7 +1,10 @@
-#Universidad ICESI
-#Informe examen 1
-#Christian C·rdenas
-#A00212740
+Universidad ICESI
+
+Informe examen 1
+
+Christian C√°rdenas
+
+A00212740
 
 
 
@@ -26,7 +29,7 @@ d.List_files/: lista los archivos en la carpeta actual, podemos usar el comando 
 
 	ls -l
 
-e.Print_file_contents/ : imprime el contenido del archivo lÈeme.txt
+e.Print_file_contents/ : imprime el contenido del archivo l√©eme.txt
 
 	cat leeme.txt
 
@@ -34,13 +37,13 @@ f. Simple_sort/: organiza los contenidos del archivo sort.txt
 
 	sort sort.txt
 
-g. search_for_files_containing_string/: imprime todos los archivos en el directorio actual que contengan la linea ì500î
+g. search_for_files_containing_string/: imprime todos los archivos en el directorio actual que contengan la linea ‚Äú500‚Äù
 
 	grep -l 500 *
 
 #Punto 2
 
-Existen varias formas de hacer scripts automatizados en CentOS, la que se utilizÛ en este para este punto consiste en el uso de los comandos expect, esta funciÛn permite comunicarse con otros programas por medio de un ìguionî, este guion funciona como si fuera el usuario el que estuviera interactuando con el SO, esto es especialmente ˙til cuando se quiere trabajar con rutinas que requieren entradas directas del usuario, como por ejemplo una conexiÛn por SSH en la cual hay que loguearse en una maquina remota.
+Existen varias formas de hacer scripts automatizados en CentOS, la que se utiliz√≥ en este para este punto consiste en el uso de los comandos expect, esta funci√≥n permite comunicarse con otros programas por medio de un ‚Äúguion‚Äù, este guion funciona como si fuera el usuario el que estuviera interactuando con el SO, esto es especialmente √∫til cuando se quiere trabajar con rutinas que requieren entradas directas del usuario, como por ejemplo una conexi√≥n por SSH en la cual hay que loguearse en una maquina remota.
 Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 
 
@@ -50,7 +53,7 @@ Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 
 	spawn shh operativos@192.168.57.30
 
-	-se hace uso de expect, el cual permite en combinacion con 	el comando send crear posibles rutinas de posibles 	salidas de la consola con el SO, de forma que se pueden 	automatizar la ejecuci√≥n de scripts
+	-se hace uso de expect, el cual permite en combinacion con 	el comando send crear posibles rutinas de posibles 	salidas de la consola con el SO, de forma que se pueden 	automatizar la ejecuci√É¬≥n de scripts
 	-se estan descargando Metamorfosis de Franz Kafka y Tom 	Sawyer de Mark Twain
 
 	spawn ssh operativos 192.168.57.30
@@ -96,8 +99,8 @@ Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 
 #punto 3
 
-CreaciÛn de un contenedor de debÌan mediante LXC y dar pruebas de su funcionamiento
-Para poder instalar un contenedor LXC primero debemos instalar todas las librerÌas (interprete de perl y paquetes de debootstrap) necesarias para poder ejecutar sus dependencias por lo que es necesario ejecutar los comandos.
+Creaci√≥n de un contenedor de deb√≠an mediante LXC y dar pruebas de su funcionamiento
+Para poder instalar un contenedor LXC primero debemos instalar todas las librer√≠as (interprete de perl y paquetes de debootstrap) necesarias para poder ejecutar sus dependencias por lo que es necesario ejecutar los comandos.
 
 	yum install epel-release
 
@@ -113,7 +116,7 @@ Mediante el uso de los comandos status y start prodemos verificar si el proceso 
 
 	systemctl start lxc.service
 
-Ahora mediante el uso del comando #lxc-checkconfig podemos verificar el status del n˙cleo de virtualizaciÛn.
+Ahora mediante el uso del comando #lxc-checkconfig podemos verificar el status del n√∫cleo de virtualizaci√≥n.
 Ahora debemos seleccionar la plantilla que queramos usar para crear el contenedor, podemos ver las plantillas disponibles mediante el uso del comando
 
 		ls -alh /usr/share/lxc/templates
@@ -121,7 +124,7 @@ En nuestro caso vamos a instalar un contenedor de Debian por lo que lo crearemos
 
 		lxc-create -n contenedorDChristian -t Debian
 
-Una vez termine la creaciÛn del contenedor debemos iniciarlo 
+Una vez termine la creaci√≥n del contenedor debemos iniciarlo 
 		
 		lxc-start -n contenedorDChristian -d
 
@@ -132,7 +135,7 @@ Finalmente, para acceder al contenedor usamos el comando
 
 #Referencias
 
-InstalaciÛn de contenedor: lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
+Instalaci√≥n de contenedor: lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
 
 Comando expect: https://www.lifewire.com/linus-unix-command-expect-2201096
 Cmd challenge: https://cmdchallenge.com
