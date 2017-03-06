@@ -6,6 +6,10 @@ Christian Cárdenas
 
 A00212740
 
+Repository URL: https://github.com/cdcardenas/so-exam1
+
+Reposiory URL: https://github.com/ICESI-training/so-exam1/A00212740
+
 
 
 #punto 1
