@@ -21,29 +21,43 @@ solucion: este reto se puede resolver utilizando el comando tail e indicando el 
 	
 	tail -5 access.log
 
+![][1]
+
 b. Hello world/ : imprime hello Word en la ventana de comandos
 
 	echo Hello World
+
+![][2]
 
 c. Current_working_directory/: imprime el directorio actual de trabajo, este reto se puede resolver usando unicamente el comando pwd que imprime en consola el directorio actual
 
 	pwd
 
+![][3]
+
 d.List_files/: lista los archivos en la carpeta actual, podemos usar el comando ls que me imprime todos los archivps del directorio actual y -l para que imprima 1 por linea
 
 	ls -l
+
+![][4]
 
 e.Print_file_contents/ : imprime el contenido del archivo léeme.txt
 
 	cat leeme.txt
 
+![][5]
+
 f. Simple_sort/: organiza los contenidos del archivo sort.txt
 
 	sort sort.txt
 
+![][6]
+
 g. search_for_files_containing_string/: imprime todos los archivos en el directorio actual que contengan la linea “500”
 
 	grep -l 500 *
+
+![][7]
 
 #Punto 2
 
@@ -101,6 +115,9 @@ Para utilizar expect primero debemos instalarlo, por lo que usamos los comandos
 	expect eof
 
 
+![][8]
+![][9]
+
 #punto 3
 
 Creación de un contenedor de debían mediante LXC y dar pruebas de su funcionamiento
@@ -137,6 +154,13 @@ Finalmente, para acceder al contenedor usamos el comando
 		lxc-console -n contenedorDChristian
 
 
+![][10]
+![][11]
+![][12]
+![][13]
+![][14]
+
+
 #Referencias
 
 Instalación de contenedor: lxc http://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/
@@ -145,3 +169,17 @@ Comando expect: https://www.lifewire.com/linus-unix-command-expect-2201096
 
 Cmd challenge: https://cmdchallenge.com
 
+[1]: images/reto6.png
+[2]: images/reto1.png
+[3]: images/reto2.png
+[4]: images/reto3.png
+[5]: images/reto4.png
+[6]: images/reto5.png
+[7]: images/reto7.png
+[8]: images/punto2a.png
+[9]: images/punto2b.png
+[10]: images/punto3a.png
+[11]: images/punto3b.png
+[12]: images/punto3c.png
+[13]: images/punto3d.png
+[14]: images/punto3e.png
